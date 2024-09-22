@@ -12,14 +12,17 @@ require('dotenv').config();
 const mongoURL=process.env.MONGODB_URL // mongodb Atlas  database server online
 
 //set  up mongodb connections
+mongoose.connect(mongoURL)
+    .then(() => console.log("Connected to MongoDB server"))
+    .catch(err => console.error("MongoDB connection error:", err));
 
-mongoose.connect(mongoURL,{
+// mongoose.connect(mongoURL,{
 
-    // useNewUrlParser:true,          // Removed deprecated options
+//     // useNewUrlParser:true,          // Removed deprecated options
 
-    // useUnifiedTopology:true       //    // Removed deprecated options
+//     // useUnifiedTopology:true       //    // Removed deprecated options
 
-})
+// })
 
 
 //Get the default connections
