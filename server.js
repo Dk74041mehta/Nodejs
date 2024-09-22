@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const db= require('./db');
+require('dotenv').config();
+
 
 // const person= require('./Models/person');
 
@@ -9,6 +11,8 @@ const db= require('./db');
 //Middleware
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());  //  store object in req.body (bodyparsser->json data->object)  And have to only use
+
+const PORT = process.env.PORT || 3000;
 
 
 app.get('/', function (req, res) {
@@ -147,10 +151,15 @@ app.use("/person",personRoutes);
 app.use("/menu",menuItemRoutes);
 
 
-
-
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
 
   console.log("listening on port 3000");
 })
-//
+
+// app.listen(3000,()=>{
+
+//   console.log("listening on port 3000");
+// })
+
+
+

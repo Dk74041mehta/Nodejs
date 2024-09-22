@@ -1,9 +1,15 @@
 //Importing Mongoose
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-//define the mongoDB  connection URL
 
-const mongoURL='mongodb://localhost:27017/hotels'//replace myapp with your database name
+//define the mongoDB  connection URL 
+
+//local server of database
+
+// const mongoURL=process.env.MONGODB_URL_Local //replace myapp with your database name
+
+const mongoURL=process.env.MONGODB_URL // mongodb Atlas  database server
 
 //set  up mongodb connections
 
