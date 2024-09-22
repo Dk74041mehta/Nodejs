@@ -5,11 +5,11 @@ require('dotenv').config();
 
 //define the mongoDB  connection URL 
 
-//local server of database
+//local server of database using mongodb
 
 // const mongoURL=process.env.MONGODB_URL_Local //replace myapp with your database name
 
-const mongoURL=process.env.MONGODB_URL // mongodb Atlas  database server
+const mongoURL=process.env.MONGODB_URL // mongodb Atlas  database server online
 
 //set  up mongodb connections
 
